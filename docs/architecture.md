@@ -1,10 +1,10 @@
 # Application architecture
 
-Status: architecture implemented through platform administration, manual billing and analytics, 2026-09-16. The phase tables below preserve the original delivery sequence; [implementation progress](implementation.md) records actual checks and external launch dependencies. Source schemas and ADR updates resolve differences from conceptual examples. Production deployment has not been executed.
+Status: architecture implemented through platform administration, manual billing and analytics, 2026-09-16, and first deployed to production on 2026-10-03. The phase tables below preserve the original delivery sequence; [implementation progress](implementation.md) records actual checks and external launch dependencies. Source schemas and ADR updates resolve differences from conceptual examples.
 
 ## 1. Recommended final architecture
 
-Build a **modular monolith**: one Next.js App Router application, one PostgreSQL database, S3-compatible image storage, and a CDN for immutable public assets. Use the Node server runtime initially so authentication, database drivers, and image processing have a consistent execution environment. The authorized deployment target is the existing server behind resto.loyiham.uz; see the operations runbook for its isolated service and storage configuration.
+Build a **modular monolith**: one Next.js App Router application, one PostgreSQL database, S3-compatible image storage, and a CDN for immutable public assets. Use the Node server runtime initially so authentication, database drivers, and image processing have a consistent execution environment. The authorized deployment target is the existing server behind resmen.loyiham.uz; see the operations runbook for its isolated service and storage configuration.
 
 The application has five distinct surfaces: marketing, restaurant dashboard, public menus, cashier, and platform administration. They share selected UI and domain modules, not authorization scopes. Server Components load data directly through server modules; do not make HTTP requests back into our own API. Server Actions handle same-origin dashboard forms; Route Handlers serve authentication, public ordering, cashier polling, signed upload requests, and external webhooks when introduced.
 

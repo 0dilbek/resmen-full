@@ -68,7 +68,7 @@ The release archive excludes environment files, development database/mail/upload
 
 ## Remaining limitations
 
-Online provider charging/webhooks, restaurant archival UI, external email delivery and offsite backup delivery are not implemented/configured. Private local uploads and the S3 adapter are implemented; production must choose and provision storage. The working brand still needs owner/name clearance and a physical QR print proof. **resto.loyiham.uz is not deployed by this work.**
+Online provider charging/webhooks, restaurant archival UI, external email delivery and offsite backup delivery are not implemented/configured. Private local uploads are active in production and the S3 adapter is available for a future migration. The working brand still needs owner/name clearance and a physical QR print proof. **Release `2026-10-03T11-03-47-695Z` is deployed at `https://resmen.loyiham.uz`; see `docs/deployment.md` for verified evidence and remaining operational limits.**
 
 Release inspection initially rejected traced development mail/test metadata in standalone output. The unsent archive was removed; tracing exclusions, generated-output cleanup and a recursive release rejection guard now prevent packaging those paths. The corrected build passed lint and its built-in TypeScript check; all three targeted registration/reset/catalog/QR/order/browser flows passed again. Health, localized home, demo and preview asset returned HTTP 200. Three isolated release-guard fixtures verified rejection before archive creation. The corrected archive passed its checksum, forbidden-path and 60-preview checks.
 

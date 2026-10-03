@@ -1,6 +1,6 @@
 # Deployment and operations
 
-Target: `https://resto.loyiham.uz` through the existing `tezbozor` SSH profile. Deployment is authorized, but **has not been executed**. Never treat the existing domain redirect as a live Ravoq application.
+Target: `https://resmen.loyiham.uz` through the existing `tezbozor` SSH profile. The first production release was activated on 2026-10-03.
 
 ## Verified infrastructure and local evidence
 
@@ -13,7 +13,7 @@ The standalone build copies `public` and `.next/static`, then removes copied env
 ## Configuration still required
 
 - A working SMTP host, TLS port, sender identity and credentials. Verified registration and password reset depend on this. Production rejects file mail. No SMTP delivery has been claimed/tested against an external provider.
-- Private S3-compatible storage credentials/bucket, or an explicit single-server persistent local path. Local storage works at `/var/lib/ravoq/uploads`; all accesses still pass through publication/membership checks. S3 is the intended scalable production option. Do not expose the bucket publicly or grant anonymous listing.
+- Private S3-compatible storage credentials/bucket are still optional future infrastructure. The current single-server deployment uses the persistent private path `/var/lib/ravoq/uploads`; all accesses still pass through publication/membership checks. Do not expose a future bucket publicly or grant anonymous listing.
 - Actual payment provider selection if online charging is required. Current billing is an audited manual subscription/payment ledger; it does not charge cards or process provider webhooks.
 - Business sender/contact/legal identity and final brand clearance. Current branding is a working original identity, not a trademark clearance.
 
@@ -26,14 +26,14 @@ Keep secrets in `/etc/ravoq/app.env`, owned by root and readable only by the app
 3. Run `pnpm release`. It writes an explicit-allowlist archive and SHA-256 file into private `.local/releases`. Verify the digest after upload. The archive excludes `.env`, development mail, uploads, tests/results and Git metadata.
 4. Extract to `/srv/ravoq/releases/<release-id>`, not over the current release. Keep release files root-owned/read-only; create its `.next/standalone/.next/cache` writable by the dedicated `ravoq` user. Install lockfile-pinned dependencies for migration/maintenance tools in the release (`pnpm install --frozen-lockfile`); the runtime itself uses its bundled dependencies.
 5. Provision a dedicated unprivileged `ravoq` system user and a dedicated database. Use separate database migration and runtime roles. Migrate with the trusted migration role using `node --env-file=/etc/ravoq/migrator.env --import=tsx scripts/migrate.ts`. No `drizzle-kit push` or hand-edited production tables.
-6. Grant the runtime role only connect/schema usage and required table operations. Keep `audit_log`, `order_event` and `template_revision` append-only to the runtime role (SELECT/INSERT, no UPDATE/DELETE), and grant future migrations explicitly. The maintenance role additionally needs bounded DELETE on `analytics_event`, `request_limit` and pending `media_asset`. A separate maintenance environment file should carry that role.
+6. Grant the runtime role only connect/schema usage and required table operations. Health checks also require `USAGE` on the `drizzle` schema and `SELECT` on `drizzle.__drizzle_migrations`. Keep `audit_log`, `order_event` and `template_revision` append-only to the runtime role (SELECT/INSERT, no UPDATE/DELETE), and grant future migrations explicitly. The maintenance role additionally needs bounded DELETE on `analytics_event`, `request_limit` and pending `media_asset`. A separate maintenance environment file should carry that role.
 7. For an existing installation, take and verify a backup before migrations. Apply backward-compatible migrations before flipping the `current` symlink. Existing business rows must never be replaced by demo seed data. Demo template pages do not need database seed data.
 
 ## Service, HTTPS and activation
 
 `deploy/ravoq.service` is the concrete service template. Set `/srv/ravoq/current` atomically to the prepared release, install the unit, run `systemd-analyze verify` and `systemctl daemon-reload`, then start it. Bind only to `127.0.0.1:3107`. Check `curl --fail http://127.0.0.1:3107/api/health`, the localized homepage and a template demo before exposing traffic.
 
-`deploy/resto.loyiham.uz.nginx.conf` supplies the isolated virtual host, safe access-log format, overwritten proxy identity headers, body/rate limits and disabled proxy caching. First install only the HTTP ACME location if the certificate does not exist. Obtain a domain-specific certificate through the installed Certbot's webroot workflow using `/var/www/ravoq-acme`; then enable the HTTPS block. Do not overwrite an unrelated virtual host or certificate. Run `nginx -t` before a graceful reload. Verify HTTPS without `-k` and verify certificate renewal with the installed Certbot dry-run workflow.
+`deploy/resmen.loyiham.uz.nginx.conf` supplies the isolated virtual host, safe access-log format, overwritten proxy identity headers, body/rate limits and disabled proxy caching. First install only the HTTP ACME location if the certificate does not exist. Obtain a domain-specific certificate through the installed Certbot's webroot workflow using `/var/www/ravoq-acme`; then enable the HTTPS block. Do not overwrite an unrelated virtual host or certificate. Run `nginx -t` before a graceful reload. Verify HTTPS without `-k` and verify certificate renewal with the installed Certbot dry-run workflow.
 
 The proxy must overwrite forwarded headers and the backend must remain unreachable externally. Access logs omit query strings, bodies, cookies and capability paths. Restrict/rotate journal and Nginx logs. Unexpected application errors expose a correlation ID rather than SQL/credential details. Nginx critical diagnostics remain private operational records.
 
@@ -55,4 +55,8 @@ Stop the app if the release is corrupt, atomically point `current` to the previo
 
 ## Status
 
-No remote services, data, Nginx configuration or certificates have been changed for this application. SMTP/storage/payment-provider decisions remain external configuration. The files above are prepared deployment artifacts, not evidence of a completed deployment.
+Release `2026-10-03T11-03-47-695Z` is active through `/srv/ravoq/current`; its verified SHA-256 is `d6e9778473958060142089234cb35ee76d6ebee433de4a64528dc16d2a59ba12`. The dedicated `ravoq` service binds to `127.0.0.1:3107`, and the public backend port is not reachable externally. PostgreSQL contains 44 application tables and ten applied migration journal entries. The runtime role has no `UPDATE` or `DELETE` privilege on `audit_log`, `order_event`, or `template_revision`.
+
+Nginx serves the domain over HTTPS and redirects HTTP. The Let's Encrypt certificate is valid through 2027-01-01; Certbot's renewal dry run succeeded. HTTPS health, Uzbek home, and the template catalog returned 200 from both the server and an external client. The maintenance service completed successfully and its daily timer is enabled. A custom-format database backup at `/var/backups/ravoq/ravoq-2026-10-03.dump` restored into an isolated verification database with 44 tables, ten migrations, and the designated test account before that verification database was removed.
+
+The designated test account was created through the production auth endpoint, marked verified for deployment testing, and passed sign-in/session checks. Its password is intentionally not stored in this repository. External SMTP is not configured: the placeholder loopback SMTP target lets the service validate its production environment, but registration verification and password-reset delivery will fail until real SMTP credentials are installed. Offsite database/upload backup delivery and online payment-provider integration also remain external operational work.
