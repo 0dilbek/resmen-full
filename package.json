@@ -1,0 +1,83 @@
+{
+  "name": "ravoq-qr-menu",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.33.3",
+  "engines": {
+    "node": ">=22.0.0 <25"
+  },
+  "scripts": {
+    "dev": "next dev --webpack --hostname 127.0.0.1",
+    "build": "next build --webpack && node scripts/prepare-standalone.mjs",
+    "start": "node scripts/start.mjs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "admin:grant": "tsx scripts/grant-admin.ts",
+    "demo:assets": "tsx scripts/demo-assets.ts",
+    "templates:capture": "tsx scripts/capture-templates.ts",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"tests/**/*.ts\" \"scripts/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"tests/**/*.ts\" \"scripts/*.ts\"",
+    "maintenance": "tsx --conditions=react-server scripts/maintenance.ts",
+    "release": "node scripts/release.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1133.0",
+    "@base-ui/react": "^1.8.0",
+    "@better-auth/drizzle-adapter": "1.7.5",
+    "@hookform/resolvers": "^5.9.1",
+    "@react-three/fiber": "9.8.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tanstack/react-query": "^5.103.0",
+    "better-auth": "1.7.5",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "0.45.2",
+    "lucide-react": "^1.46.0",
+    "next": "16.3.8",
+    "next-intl": "^4.14.5",
+    "nodemailer": "^10.0.10",
+    "pg": "^8.23.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-hook-form": "^7.88.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.4",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.3",
+    "three": "0.186.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22.20.3",
+    "@types/nodemailer": "^8.0.2",
+    "@types/pg": "^8.23.1",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "0.186.0",
+    "drizzle-kit": "^0.31.10",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.3.8",
+    "jsdom": "^30.0.1",
+    "prettier": "^3.9.7",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.1"
+  },
+  "type": "module",
+  "pnpm": {
+    "overrides": {
+      "@esbuild-kit/core-utils>esbuild": "0.25.12"
+    }
+  }
+}

@@ -1,0 +1,306 @@
+.design-studio {
+  --studio-line: #d9ded5;
+}
+.studio-gallery .category-pills {
+  flex-wrap: wrap;
+}
+.studio-gallery .category-pills button {
+  border: 1px solid var(--studio-line);
+  border-radius: 24px;
+  padding: 12px 18px;
+  min-height: 44px;
+  background: white;
+  color: #294436;
+}
+.studio-gallery .category-pills button[aria-pressed="true"] {
+  color: white;
+  background: #244b3f;
+}
+.studio-template-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.studio-template-card {
+  overflow: hidden;
+  border: 1px solid var(--studio-line);
+  background: white;
+  border-radius: 12px;
+}
+.studio-template-card.selected {
+  outline: 3px solid #244b3f;
+  outline-offset: 2px;
+}
+.studio-template-shot {
+  padding: 24px 36px 0;
+  height: 260px;
+  overflow: hidden;
+  perspective: 900px;
+}
+.studio-template-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 6px solid #26392e;
+  border-radius: 20px 20px 0 0;
+  transform: rotateY(-6deg) rotateZ(2deg);
+  box-shadow: 14px 12px 30px #00000024;
+  transition: transform 220ms;
+}
+.studio-template-card:hover .studio-template-shot img {
+  transform: rotateY(0) rotateZ(0);
+}
+.studio-template-copy {
+  padding: 20px;
+}
+.studio-template-copy small {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #526256;
+}
+.studio-template-copy h3 {
+  font:
+    400 24px Georgia,
+    serif;
+  margin: 10px 0;
+}
+.studio-template-copy p {
+  color: #526256;
+  font-size: 13px;
+  min-height: 44px;
+}
+.studio-template-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+.studio-template-actions a {
+  padding-block: 12px;
+  font-size: 13px;
+}
+.studio-template-actions button {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #244b3f;
+  background: #244b3f;
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.studio-template-actions button:disabled {
+  opacity: 0.5;
+}
+.design-workbench {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  margin-top: 48px;
+}
+.design-controls {
+  background: white;
+  border: 1px solid var(--studio-line);
+  padding: 24px;
+  border-radius: 12px;
+}
+.design-controls h2 {
+  font:
+    26px Georgia,
+    serif;
+}
+.design-controls fieldset {
+  margin: 24px 0 0;
+  padding: 18px 0 0;
+  border: 0;
+  border-top: 1px solid var(--studio-line);
+}
+.design-controls legend {
+  font-weight: 700;
+  font-size: 12px;
+}
+.design-controls label {
+  display: grid;
+  gap: 6px;
+  margin-block: 12px;
+  font-size: 12px;
+}
+.design-controls input[type="color"] {
+  width: 100%;
+  height: 44px;
+  padding: 4px;
+}
+.design-controls input[type="file"] {
+  max-width: 100%;
+  font-size: 11px;
+}
+.design-controls .check-label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.design-preview-column {
+  min-width: 0;
+  position: sticky;
+  top: 20px;
+}
+.live-preview {
+  border: 1px solid var(--studio-line);
+  background: #e7ebe4;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.live-preview-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 18px;
+  background: white;
+}
+.live-preview-bar p {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: #526256;
+}
+.preview-controls {
+  display: flex;
+  gap: 4px;
+}
+.preview-controls button {
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #ccd4ca;
+  border-radius: 5px;
+  background: white;
+  color: #294436;
+}
+.preview-controls button[aria-pressed="true"] {
+  background: #244b3f;
+  color: white;
+}
+.preview-stage {
+  overflow: auto;
+  padding: 30px;
+  height: 740px;
+}
+.live-preview-device {
+  height: 660px;
+  margin: auto;
+  background: white;
+  border: 8px solid #253b34;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 16px 20px 40px #1c312b24;
+  transition: width 240ms ease;
+  flex-shrink: 0;
+}
+.device-mobile {
+  width: 390px;
+}
+.device-tablet {
+  width: 768px;
+}
+.live-preview-device iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: white;
+}
+.design-preview-dialog {
+  position: fixed;
+  inset: 12px;
+  z-index: 110;
+  border: 1px solid #d5dcd3;
+  border-radius: 16px;
+  background: #e7ebe4;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.design-preview-dialog .preview-stage {
+  flex: 1;
+  height: auto;
+}
+.design-preview-dialog .live-preview-device {
+  height: max(650px, calc(100vh - 190px));
+}
+.design-preview-dialog h2 {
+  font:
+    22px Georgia,
+    serif;
+  margin: 0;
+}
+.design-save-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+.design-save-bar strong {
+  margin-right: auto;
+}
+@media (max-width: 1100px) {
+  .studio-template-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .design-workbench {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+  .preview-stage {
+    padding: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .studio-template-grid {
+    grid-template-columns: 1fr;
+  }
+  .studio-template-shot {
+    height: 300px;
+    padding-inline: 60px;
+  }
+  .design-workbench {
+    display: flex;
+    flex-direction: column;
+  }
+  .design-controls,
+  .design-preview-column {
+    width: 100%;
+    position: static;
+  }
+  .preview-stage {
+    padding: 12px;
+    height: 600px;
+  }
+  .device-mobile {
+    width: 100%;
+    max-width: 390px;
+  }
+  .live-preview-device {
+    height: 560px;
+    border-width: 5px;
+  }
+  .design-preview-dialog {
+    inset: 4px;
+  }
+  .design-preview-dialog .preview-stage {
+    padding: 8px;
+  }
+  .live-preview-bar {
+    padding: 12px;
+  }
+  .design-preview-dialog .live-preview-device {
+    height: max(540px, calc(100dvh - 180px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .studio-template-shot img,
+  .live-preview-device {
+    transform: none;
+    transition: none;
+  }
+}

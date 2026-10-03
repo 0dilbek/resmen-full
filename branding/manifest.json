@@ -1,0 +1,399 @@
+{
+  "brand": "Ravoq",
+  "assets": [
+    {
+      "id": "dish-2",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-2.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 737,
+      "sha256": "eaf294e4c4d37b1aa284e8a9936434c0a074f2ef8bebaf510316242ee66c28ed",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "dish-5",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-5.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 1843,
+      "sha256": "9638b8a2a04dc571ce6238ac81606b9311f537c8abdf3b04f4f077c10870b32f",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "dish-1",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-1.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 7180,
+      "sha256": "247ab6b126129f85877e0d2c3790a09e8452052fb4938c81d66d07d2f3d0d2c8",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "dish-7",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-7.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 803,
+      "sha256": "d657810a767b4d1be31c222aa2b78b3c1cc30f8de5f0e68854e745403e84758d",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "dish-8",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-8.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 892,
+      "sha256": "2803fb1ba82d587954d2f5d324b2b09c7e90f2f67e41890203580fc22f27f390",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "dish-4",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-4.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 8099,
+      "sha256": "f0abe2b026ea70b69fc630e9ea071585efc58163d074608b885b1d7ff1bc9e6c",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "dish-3",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-3.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 1458,
+      "sha256": "95099acf144af292eb5e328f0515a1880105b4f143ef2756f585142825686531",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "dish-6",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-6.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 764,
+      "sha256": "35967eeb2d34d691a9aede6b6ed9b09523c52f63f3840b224dec4d9c81b5fe49",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "girih",
+      "version": 1,
+      "path": "public/branding/patterns/girih.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 305,
+      "sha256": "5c655c05a6852928663ca5f6fe245f9cd60c6d5b72da4e1a6170afdb09ff45f1",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "ravoq-light-v1",
+      "version": 1,
+      "path": "public/branding/logo/ravoq-light-v1.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 762,
+      "sha256": "9a861370a0ded8279d759ced987f0b95a06b0aa5234c4cfaa969fa11ce1eb14d",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "ravoq-mark-v1",
+      "version": 1,
+      "path": "public/branding/logo/ravoq-mark-v1.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 268,
+      "sha256": "bf77915d47b974a17182920d847a8cac612ffa913eb95400f96464dc37d99acf",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "ravoq-primary-v1",
+      "version": 1,
+      "path": "public/branding/logo/ravoq-primary-v1.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 709,
+      "sha256": "9feaddc36f5950a4f4100bbefadb43e7e7530789523ace9f3e102ceb04cfe992",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "ravoq-stacked-v1",
+      "version": 1,
+      "path": "public/branding/logo/ravoq-stacked-v1.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 709,
+      "sha256": "a719bf34e87ec92740692e1d2369db5e8f2fd19122c130f8b75fae9bf08d15c1",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "ravoq-monochrome-v1",
+      "version": 1,
+      "path": "public/branding/logo/ravoq-monochrome-v1.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 709,
+      "sha256": "c3d40591d6f0436d954ed16bb897e5b35713b3469a9ffcb9a4aece40ccdbe11d",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "ravoq-reversed-v1",
+      "version": 1,
+      "path": "public/branding/logo/ravoq-reversed-v1.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 762,
+      "sha256": "3b6f1d6e28d3c829c8ae1128d8905538c76f06d977a86ae2a8630d3b0548016e",
+      "approval": "working identity; owner review pending",
+      "alt": "Use contextual accessible name; hide decorative repetitions"
+    },
+    {
+      "id": "favicon-32-v1",
+      "version": 1,
+      "path": "public/branding/logo/favicon-32-v1.png",
+      "creator": "Original Ravoq arch mark",
+      "source": "src/app/icon.svg via Sharp raster export",
+      "license": "Original project asset",
+      "bytes": 614,
+      "sha256": "5ae2cb1347c15632e8489db5527722450d182fe3036b16d4cc6f910d55b2b158",
+      "approval": "working identity; owner review pending",
+      "alt": "Ravoq favicon"
+    },
+    {
+      "id": "favicon-16-v1",
+      "version": 1,
+      "path": "public/branding/logo/favicon-16-v1.png",
+      "creator": "Original Ravoq arch mark",
+      "source": "src/app/icon.svg via Sharp raster export",
+      "license": "Original project asset",
+      "bytes": 340,
+      "sha256": "1d55c2e61ecc8eeaf002f27f73328138b01bfab0b8f01b22c882ce24b600cf95",
+      "approval": "working identity; owner review pending",
+      "alt": "Ravoq favicon"
+    },
+    {
+      "id": "dish-9",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-9.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 475,
+      "sha256": "6c6d1d7bf4f70053e858d4dcf22fd9c96104677c80dd34a88dc28ee0d2711c56",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    },
+    {
+      "id": "dish-10",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-10.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 475,
+      "sha256": "6c6d1d7bf4f70053e858d4dcf22fd9c96104677c80dd34a88dc28ee0d2711c56",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    },
+    {
+      "id": "dish-11",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-11.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 513,
+      "sha256": "84d67c71c3d3aab91254b361154a78dc47af202e74959cc2bce25dcedd1176a5",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    },
+    {
+      "id": "dish-12",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-12.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 513,
+      "sha256": "84d67c71c3d3aab91254b361154a78dc47af202e74959cc2bce25dcedd1176a5",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    },
+    {
+      "id": "dish-13",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-13.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 655,
+      "sha256": "eab6d757cd7fac65bbf710703b8844009e50cbdebb6b5c7a4f59271fc96f0144",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    },
+    {
+      "id": "dish-14",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-14.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 655,
+      "sha256": "eab6d757cd7fac65bbf710703b8844009e50cbdebb6b5c7a4f59271fc96f0144",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    },
+    {
+      "id": "dish-15",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-15.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 650,
+      "sha256": "25655e74d991881c175dd8a51e3a2661e38cc9440af2a2c19868d6cb0ad5e19b",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    },
+    {
+      "id": "dish-16",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-16.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 650,
+      "sha256": "25655e74d991881c175dd8a51e3a2661e38cc9440af2a2c19868d6cb0ad5e19b",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    },
+    {
+      "id": "dish-17",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-17.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 564,
+      "sha256": "cf791b5b92cef7043626be15f7d0fbb3ad2388db8b84a69f03b21cdf539659ab",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    },
+    {
+      "id": "dish-18",
+      "version": 1,
+      "path": "public/branding/illustrations/dish-18.svg",
+      "creator": "Original code-drawn artwork for Ravoq",
+      "source": "Project SVG source",
+      "license": "Original project asset; no third-party artwork incorporated",
+      "bytes": 672,
+      "sha256": "5491ba8627964691198518a201dc45c4bb2512431edec7c1c66ee8940fa7fc35",
+      "approval": "Working illustration; owner refinement pending",
+      "alt": "Contextual product name; decorative repeats hidden",
+      "dimensions": {
+        "width": 960,
+        "height": 720,
+        "viewBox": "0 0 960 720"
+      },
+      "intendedUse": "Immutable showcase food illustration; not tenant upload content",
+      "reviewer": "Owner review pending"
+    }
+  ]
+}

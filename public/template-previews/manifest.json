@@ -1,0 +1,311 @@
+{
+  "locale": "en",
+  "capturedAt": "2026-10-03T10:23:19.796Z",
+  "templates": [
+    {
+      "id": "minimal-01",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "minimal-02",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "minimal-03",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "minimal-04",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "minimal-05",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "luxury-01",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "luxury-02",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "luxury-03",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "luxury-04",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "luxury-05",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "coffee-01",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "coffee-02",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "coffee-03",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "coffee-04",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "coffee-05",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "fastfood-01",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "fastfood-02",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "fastfood-03",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "fastfood-04",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "fastfood-05",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "asian-01",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "asian-02",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "asian-03",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "asian-04",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "asian-05",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "uzbek-modern-01",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "uzbek-modern-02",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "uzbek-premium-01",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "uzbek-suzani-01",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "uzbek-ornament-minimal-01",
+      "version": 2,
+      "fixture": "immutable-showcase-v1"
+    },
+    {
+      "id": "editorial-magazine",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "dark-luxury",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "japanese-minimal",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "neo-brutalism",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "scrapbook",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "uzbek-heritage",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "brutalist",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "glass",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "food-cinema",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "playing-cards",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "newspaper",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "vintage-italian",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "french-bistro",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "cyberpunk",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "terminal",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "retro-game",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "comic-book",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "polaroid",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "museum",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "luxury-watch",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "playlist",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "screening",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "stories",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "swipe",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "food-journey",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "khiva-manuscript",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "oriental-premium",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "botanical",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "food-cards-3d",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    },
+    {
+      "id": "dynamic-brand",
+      "version": 3,
+      "fixture": "immutable-showcase-v2"
+    }
+  ],
+  "rendererVersions": {
+    "legacy": 2,
+    "premium": 3
+  },
+  "captureScope": "premium"
+}

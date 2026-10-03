@@ -1,0 +1,99 @@
+# Brand and creative strategy
+
+Status: original working Ravoq identity, naming exploration, SVG logo variants, favicons, illustration package and renderer captures are implemented. The guidance below retains the original creative criteria; branding/README.md and its checksum manifest describe delivered assets. Domain/trademark clearance, cultural review and physical print approval are not claimed.
+
+## Positioning
+
+A calm, dependable menu platform that helps restaurant teams publish a beautiful menu and serve guests with less friction. The platform identity should work in Uzbekistan and internationally, while each restaurant retains its own identity on public menus. Uzbek cultural references are a distinctive option in selected menu families, not a mandatory decoration on every administrative screen.
+
+Voice: direct, hospitable, clear, and respectful. Public menus prioritize dishes, prices, and useful details. Dashboard copy names actions and outcomes precisely: Save draft, Preview, Publish design, Mark unavailable. Avoid jargon and playful error messages during service.
+
+## Creative sequence and deliverables
+
+| Step | Required output and acceptance |
+| --- | --- |
+| 1. Naming exploration | 20 short pronounceable candidates with meaning/rationale and tone; best five; slogan options. Check Uzbek/Russian/English pronunciation and unwanted meanings. Research domain/trademark conflicts before selection; availability is never assumed |
+| 2. Brand direction | Compare restrained hospitality, modern editorial, and contemporary Uzbek directions; select one core identity that also works without ornament |
+| 3. Logo concepts | Three original scalable concepts for the selected name, then one refined system with primary/compact/mark/favicon, monochrome, and light/dark variants |
+| 4. Tokens and typography | Accessible light/dark semantic tokens, licensed font shortlist and glyph tests, menu-safe override rules |
+| 5. Marketing art direction | Product-led hero, feature illustrations, empty-state vocabulary, and coherent composition rules |
+| 6. Menu families | Validate four actual renderers, then expand the six-family roadmap |
+| 7. Uzbek family | Five distinct modern compositions, local cultural review and readability checks |
+| 8. Decorative assets | Original modular borders, separators, corners, and small repeating patterns with provenance |
+| 9. Preview assets | Real renderer screenshots in fixed mobile/desktop viewports with licensed content |
+| 10. Refinement | Small-size, contrast, print, mobile performance, and cross-language checks; export approved originals |
+
+These steps can accompany the engineering phases without requiring a final brand to build the tenant/auth foundation. Use neutral working text and system fonts until identity choices are made.
+
+## Provisional color directions
+
+These are exploration values, not approved semantic contrast pairs. Verify contrast in context before adoption; pale/gold accents are decorative until validated for text.
+
+| Direction | Surface | Ink | Primary | Decorative accent |
+| --- | --- | --- | --- | --- |
+| Hospitality / mineral | `#FAF8F3` | `#182A28` | `#245C50` | `#C18A51` |
+| Contemporary Uzbek | `#FAF7F0` | `#172B45` | `#235C78` | `#B57A3E` |
+| Editorial neutral | `#FFFFFF` | `#202124` | `#373F46` | `#B76747` |
+
+The dashboard uses a restrained neutral baseline and a single action accent. Cultural templates can use deep blue, turquoise, sand, or restrained gold without imposing those palettes on all restaurant brands. Status colors remain semantic and consistent across the application.
+
+## Typography and logo concepts
+
+Foundation uses a system sans-serif stack; it is a practical placeholder, not a final brand selection. The creative phase should compare a readable humanist sans for platform UI with a restrained editorial serif for luxury/cultural headings. Select only licensed, self-hostable families with Cyrillic and Latin coverage. Test Uzbek `Oʻ`, `Gʻ`, common apostrophe variants, Russian names, numerals, currency labels, and small-size weights. Limit the dashboard to one family and each template to at most two; avoid decorative fonts for prices/body copy.
+
+Name-dependent logo directions to explore: a geometric folded-menu monogram, an open frame suggesting an invitation/table place, or a restrained arch paired with a custom wordmark. Do not draw a fake scannable QR inside the brand mark or default to cutlery clipart. The exact mark should emerge from the chosen name, rather than forcing every name into the same symbol.
+
+The finished logo package needs: horizontal primary lockup, compact stacked lockup, icon mark, favicon at 16/32px, monochrome, reversed and light-background versions, minimum-size and clear-space rules. Construct/refine final paths in vector tools; align optically and test at real sizes. SVG exports must be sanitized, contain no embedded scripts/external references, and have usable viewBoxes. QR codes are functional artifacts generated by the application and always separate from the logo.
+
+## Illustration and landing-page direction
+
+Lead with a genuine product view: a legible phone menu, a small restaurant QR stand, and selected renderer previews. Supporting illustrations explain owner workflow and customer use: add a dish, choose a design, publish, scan. Use consistent geometry, limited palette, modest depth, and one coherent stroke style. Keep operational empty states compact with an actionable next step; an empty order board should remain calm and readable.
+
+Use real application screenshots for UI demonstrations and template thumbnails. Illustration must not imply functionality that has not shipped. Use original or licensed food photography with consistent crop/light direction. Never borrow famous logos or copy complete competitor compositions. Reference research should record the source and the specific pattern adapted (navigation, information hierarchy, spacing), not reproduce its artwork. The architecture phase used [shadcn's documentation](https://ui.shadcn.com/docs) as the practical component baseline; no claim of a wider visual reference study is made yet.
+
+## Uzbek-inspired decorative system
+
+Explore suzani-inspired floral rhythm, geometric/girih organization, ceramic-inspired blue accents, restrained atlas/adras color cadence, and arch/framing forms. These are broad art directions, not claims that one motif represents all Uzbek craft traditions. Create new compositions and have a designer familiar with the relevant traditions review names, symbolism, and usage. Keep a reference/provenance note for each asset.
+
+Use ornament in short separators, cover corners, header frames, or print-sheet margins. Body text, prices, buttons, allergen labels, and focus outlines stay on clean backgrounds. Do not crop sacred/historic inscriptions into decoration or reproduce unlicensed museum/artist photographs. Preserve the restaurant's own identity: motif intensity can be reduced to zero, and a template works without a cover photo or logo.
+
+Decoration is selected by curated token IDs from [the template contract](menu-template-engine.md). No arbitrary pattern uploads, CSS, or SVG injection. The [template roadmap](template-styles.md) describes five distinct culturally inspired compositions.
+
+## Asset organization and provenance
+
+Planned layout, created only when assets exist:
+
+```text
+branding/
+  README.md                    # identity usage and export instructions
+  manifest.json                # source, creator, license, approval, checksum
+  logo/                        # editable master and reviewed variants
+  patterns/                    # source tiles, corners, borders, separators
+  illustrations/               # marketing and product source compositions
+  icons/                       # custom brand symbols; UI uses Lucide
+  qr-print/                    # editable print-layout source
+public/
+  branding/                    # optimized approved exports only
+  template-previews/{id}/{version}/
+  qr-assets/                   # reviewed static print decorations
+```
+
+Every shipped asset records ID, version, creator/source, license, intended use, dimensions/viewBox, file size, alt/decorative treatment, reviewer, and approval status. Use stable lowercase filenames with explicit versions; never overwrite a CDN-cached asset at the same URL. Tenant food images live in object storage, not this repository. Downloaded restaurant QR sheets are generated per request, not committed under `public/`.
+
+Generate raster exploration when it adds value for food/hero scenes or illustration concepts. Manually construct/refine the final logo, crisp geometric ornaments, UI icons, and QR print layout as vectors/code. Generate actual gallery previews using the renderers and a browser capture pipeline. Raster concepts are not finished SVG brand marks, real QR codes, or proof of implemented UI.
+
+## Creative acceptance
+
+No final brand choice is a prerequisite for Phase 1. Before public launch, identity has a documented name review, licensed typography/assets, small-size logo tests, contrast checks, mobile image budgets, cultural review of named motifs, and a usable print proof with real QR scanning. The implemented digital deliverables are listed below; name clearance, cultural review and a physical QR print proof remain launch review items.
+
+## Implemented assets and provenance
+
+Ravoq is the current working identity (name clearance is not claimed). The arch/R monogram in `src/components/brand.tsx` and app icon, girih-inspired geometric pattern in `public/branding/patterns/girih.svg`, and eight plate illustrations in `public/branding/illustrations/` are original code-drawn SVG compositions created for this project. The dishes are stylized illustrations, not food photographs. `scripts/demo-assets.ts` creates WebP derivatives and tenant-owned metadata. No uploaded SVG is accepted. Product imagery can be replaced with a restaurant's validated photographs.
+
+Template previews are actual Chromium captures of the shipped renderers using the independent immutable showcase DTO. Capture manifest records viewport/version/date. Source SVGs remain available for manual refinement; cultural review remains recommended before positioning the designs as authentic traditional artwork.
+
+
+The implemented [identity package](../branding/README.md) now contains 20 naming candidates, a five-name shortlist, working-choice rationale, tagline options, vector logo variants, clear-space/minimum-size guidance and a checksum [asset manifest](../branding/manifest.json). No name/domain/trademark clearance is claimed. All 30 preview pairs come from the application capture pipeline; the latest capture status is in implementation.md.
+
+
+The premium collection adds ten original food SVGs (eighteen total), procedural local 3D objects and static vector empty-state/venue illustrations. All new dish files are included in the checksum asset manifest. Premium preview pairs use version 3; legacy version-1/version-2 URLs remain intact. No stock-photo or third-party service logo licenses are assumed.
