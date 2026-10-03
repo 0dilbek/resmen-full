@@ -1,6 +1,6 @@
 # Implementation progress
 
-Full implementation was authorized on 2026-09-16. Git publication remains with the user. Ravoq is the working brand.
+Full implementation was authorized on 2026-09-16. Git publication remains with the user. Resmen is the working brand.
 
 ## Phases 1–2 — implemented
 
@@ -102,3 +102,12 @@ Final verification: `pnpm typecheck`, `pnpm lint`, `pnpm format:check` and the s
 Generated and visually reviewed all **60 version-3 mobile/desktop premium previews** as a contact sheet; the final Scrapbook, Terminal and Polaroid captures were refreshed after overflow/accessibility refinements. All 60 legacy version-2 files remain unchanged and available. A real WebGL landing capture reported one canvas and no page errors; fallback checks proved the same page/menu remains usable without WebGL. Production health returned HTTP 200 after migration 0009. Production dependency audit reported zero known vulnerabilities at verification time.
 
 The first full browser pass found and fixed a transient Polaroid contrast issue, decorative Terminal text leaking into the accessible name, a four-pixel Scrapbook overflow at 430px, and an iframe test selector that matched the loading shell as well as the rendered menu. The final full run passed without waivers. No remote deployment or Git initialization was performed.
+
+
+## Phase 11 — Resmen identity and menu opening motion
+
+The product identity is now Resmen across application metadata, navigation, authentication/email copy, TOTP issuer, dashboard/marketing surfaces, deployment descriptions and the original logo package. Stable legacy logo asset paths remain valid, but their visible wordmark and manifest provenance now identify Resmen. No tenant records, published menu IDs or database schema changed.
+
+All 60 menu designs now render a template-specific CSS 3D opening intro before the existing server-rendered menu. The eleven premium compositions and six legacy families map to distinct geometry treatments while continuing to use the same validated palette and menu contract. Intros run once per template per browser session, support localized Skip and Escape, and are omitted for motion-off themes. Reduced-motion and save-data preferences bypass them. The existing optional WebGL scenes and static failure fallback remain unchanged.
+
+Verification: format, TypeScript, lint, all 59 unit/integration tests and the Next.js 16.3.8 standalone production build passed. Production Playwright passed **139/139** checks, including the new intro/Skip behavior, reduced motion, WebGL failure, all 60 design accessibility/contrast and shared mobile flows, long Cyrillic/no-photo private previews, every premium layout at 375/390/430/768px, authentication/MFA/platform, QR/order and tenant isolation flows. Food Cards 3D and Uzbek Heritage intros were visually inspected at 390×844. Production deployment results are recorded when the release is activated.

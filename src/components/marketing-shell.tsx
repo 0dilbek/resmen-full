@@ -30,7 +30,7 @@ export async function MarketingShell({
       <main className="marketing-page">{children}</main>
       <footer className="marketing-footer">
         <Brand href={`/${locale}`} />
-        <span>© {new Date().getFullYear()} Ravoq</span>
+        <span>© {new Date().getFullYear()} Resmen</span>
         <nav>
           {["faq", "contact", "privacy"].map((k) => (
             <Link key={k} href={`/${locale}/${k}`}>

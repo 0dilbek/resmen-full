@@ -1,4 +1,5 @@
 import { MotionSurface } from "@/components/visuals/motion-surface";
+import { MenuOpeningIntro } from "@/components/visuals/menu-opening-intro";
 import { themeStyle } from "./theme-style";
 import { premiumDefinition } from "./premium/catalog";
 import "./premium/styles.css";
@@ -22,18 +23,29 @@ export async function TemplateRenderer({ data }: { data: MenuData }) {
   const style = themeStyle(config);
   const design = config.design;
   const preset = premiumDefinition(config.templateId);
+  const motion = design?.animation ?? "subtle";
+  const introVariant = preset?.composition ?? entry.family;
   return (
     <main
       className={`public-menu ${entry.premium ? `premium-menu design-${entry.id}` : "edition-2"} template-${entry.family} variant-${entry.variant} layout-${entry.layout} density-${config.density} ratio-${config.imageRatio} font-${config.font} border-${config.ornamentalBorderStyle} pattern-${config.patternPlacement} frame-${config.heroFrameStyle} category-${config.categoryHeaderStyle}`}
       style={style}
       data-template={entry.id}
-      data-motion={design?.animation ?? "subtle"}
+      data-motion={motion}
       data-motion-preset={preset?.motion ?? "subtle"}
       data-image-style={design?.imageStyle}
       data-border={design?.border}
       data-shadow={design?.shadow}
       data-customized={design ? "true" : undefined}
     >
+      {motion !== "off" && (
+        <MenuOpeningIntro
+          restaurantName={data.restaurant.name}
+          templateId={entry.id}
+          variant={introVariant}
+          locale={data.locale}
+          motion={motion}
+        />
+      )}
       <MotionSurface
         enabled={design?.animation !== "off"}
         depth={!!preset?.supports3D && !!design?.show3D}

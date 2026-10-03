@@ -37,6 +37,307 @@
 .motion-surface {
   min-width: 0;
 }
+.menu-opening {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--menu-fg, #26392e);
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      color-mix(in srgb, var(--menu-primary, #285b49) 16%, transparent),
+      transparent 36%
+    ),
+    var(--menu-bg, #f7f4eb);
+  perspective: 1100px;
+  pointer-events: none;
+  opacity: 1;
+  transition:
+    opacity 420ms ease,
+    visibility 420ms ease;
+}
+.menu-opening[data-phase="closing"] {
+  opacity: 0;
+  visibility: hidden;
+}
+.menu-opening-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image: radial-gradient(currentColor 0.55px, transparent 0.7px);
+  background-size: 7px 7px;
+  mask-image: linear-gradient(to bottom, #000, transparent 80%);
+}
+.intro-3d-scene {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  width: min(66vw, 360px);
+  aspect-ratio: 1;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) rotateX(64deg) rotateZ(-18deg) scale(0.76);
+}
+.intro-object,
+.intro-orbit,
+.intro-spark {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.intro-object {
+  inset: 22%;
+  border: 1px solid
+    color-mix(in srgb, var(--menu-primary, #285b49) 55%, transparent);
+  background: color-mix(in srgb, var(--menu-bg, #f7f4eb) 88%, white);
+  box-shadow: 0 28px 55px
+    color-mix(in srgb, var(--menu-fg, #26392e) 22%, transparent);
+}
+.intro-object-main {
+  border-radius: 50%;
+  transform: translateZ(64px);
+  background: radial-gradient(
+    circle at 38% 32%,
+    white,
+    var(--menu-primary, #285b49) 68%
+  );
+}
+.intro-object-main::before,
+.intro-object-main::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  inset: 9%;
+  border: 2px solid color-mix(in srgb, var(--menu-bg, #f7f4eb) 70%, transparent);
+}
+.intro-object-main::after {
+  inset: 29%;
+  background: color-mix(in srgb, var(--menu-bg, #f7f4eb) 72%, transparent);
+  border: 0;
+}
+.intro-object-back {
+  transform: translate3d(-22px, 18px, 5px);
+  border-radius: 28%;
+}
+.intro-object-front {
+  inset: 36%;
+  transform: translate3d(74px, -30px, 105px) rotateZ(28deg);
+  border-radius: 18px;
+  background: var(--menu-accent, var(--menu-primary, #285b49));
+}
+.intro-orbit {
+  inset: 8%;
+  border: 1px solid
+    color-mix(in srgb, var(--menu-primary, #285b49) 50%, transparent);
+  border-radius: 50%;
+}
+.intro-orbit-two {
+  inset: 1%;
+  transform: translateZ(28px) rotateX(12deg);
+  border-style: dashed;
+}
+.intro-spark {
+  width: 12px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--menu-accent, var(--menu-primary, #285b49));
+  box-shadow: 0 0 24px currentColor;
+}
+.intro-spark-one {
+  left: 13%;
+  top: 30%;
+  transform: translateZ(90px);
+}
+.intro-spark-two {
+  right: 7%;
+  top: 52%;
+  transform: translateZ(130px) scale(0.62);
+}
+.intro-spark-three {
+  left: 43%;
+  bottom: 4%;
+  transform: translateZ(70px) scale(0.42);
+}
+.menu-opening-copy {
+  position: absolute;
+  left: 50%;
+  bottom: max(15vh, 92px);
+  width: min(86vw, 620px);
+  translate: -50% 0;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+.menu-opening-copy small {
+  display: block;
+  margin-bottom: 14px;
+  font:
+    700 10px/1.2 Arial,
+    sans-serif;
+  letter-spacing: 0.28em;
+}
+.menu-opening-copy strong {
+  display: block;
+  font: 500 clamp(34px, 9vw, 76px)/0.98 var(--heading-font, Georgia, serif);
+  overflow-wrap: anywhere;
+}
+.menu-opening-line {
+  display: block;
+  width: 0;
+  height: 2px;
+  margin: 20px auto 0;
+  background: var(--menu-primary, #285b49);
+}
+.menu-opening-skip {
+  position: absolute;
+  right: max(20px, 4vw);
+  bottom: max(20px, 4vw);
+  z-index: 2;
+  min-height: 44px;
+  padding: 0 15px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: inherit;
+  background: color-mix(in srgb, var(--menu-bg, #f7f4eb) 82%, transparent);
+  font:
+    700 11px/1 Arial,
+    sans-serif;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.menu-opening[data-intro-variant="cinema"],
+.menu-opening[data-intro-variant="gallery"],
+.menu-opening[data-intro-variant="luxury"] {
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      color-mix(in srgb, var(--menu-primary) 22%, transparent),
+      transparent 34%
+    ),
+    linear-gradient(
+      145deg,
+      var(--menu-bg),
+      color-mix(in srgb, var(--menu-bg) 78%, black)
+    );
+}
+.menu-opening[data-intro-variant="poster"] .intro-object,
+.menu-opening[data-intro-variant="fastfood"] .intro-object {
+  border-radius: 8px;
+  box-shadow: 12px 12px 0 var(--menu-fg);
+}
+.menu-opening[data-intro-variant="poster"] .intro-object-main,
+.menu-opening[data-intro-variant="fastfood"] .intro-object-main {
+  transform: translate3d(0, 0, 76px) rotateZ(8deg);
+}
+.menu-opening[data-intro-variant="paper"] .intro-object-main,
+.menu-opening[data-intro-variant="coffee"] .intro-object-main {
+  border-radius: 18% 55% 38% 62%;
+}
+.menu-opening[data-intro-variant="heritage"] .intro-object,
+.menu-opening[data-intro-variant="uzbek"] .intro-object {
+  border-radius: 50% 50% 12px 12px;
+  border-width: 3px;
+}
+.menu-opening[data-intro-variant="folio"] .intro-object-main,
+.menu-opening[data-intro-variant="editorial"] .intro-object-main,
+.menu-opening[data-intro-variant="minimal"] .intro-object-main {
+  border-radius: 2px;
+  background: linear-gradient(
+    115deg,
+    var(--menu-bg) 48%,
+    var(--menu-primary) 49% 52%,
+    var(--menu-bg) 53%
+  );
+}
+.menu-opening[data-intro-variant="journey"] .intro-orbit,
+.menu-opening[data-intro-variant="asian"] .intro-orbit {
+  border-radius: 4% 95% 8% 90%;
+}
+.menu-opening[data-phase="running"] .intro-3d-scene {
+  animation: menu-intro-scene 1.4s cubic-bezier(0.16, 0.8, 0.2, 1) both;
+}
+.menu-opening[data-phase="running"] .intro-object-main {
+  animation: menu-intro-object 1.55s cubic-bezier(0.16, 0.8, 0.2, 1) both;
+}
+.menu-opening[data-phase="running"] .intro-object-back {
+  animation: menu-intro-back 1.45s cubic-bezier(0.16, 0.8, 0.2, 1) both;
+}
+.menu-opening[data-phase="running"] .intro-object-front {
+  animation: menu-intro-front 1.35s cubic-bezier(0.16, 0.8, 0.2, 1) both;
+}
+.menu-opening[data-phase="running"] .intro-orbit-one {
+  animation: menu-intro-orbit 5s linear infinite;
+}
+.menu-opening[data-phase="running"] .intro-orbit-two {
+  animation: menu-intro-orbit-reverse 6s linear infinite;
+}
+.menu-opening[data-phase="running"] .intro-spark {
+  animation: menu-intro-spark 1.4s ease-out both;
+}
+.menu-opening[data-phase="running"] .menu-opening-copy {
+  animation: menu-intro-copy 900ms 300ms cubic-bezier(0.16, 0.8, 0.2, 1) both;
+}
+.menu-opening[data-phase="running"] .menu-opening-line {
+  animation: menu-intro-line 800ms 520ms ease-out both;
+}
+@keyframes menu-intro-scene {
+  from {
+    transform: translate(-50%, -50%) rotateX(82deg) rotateZ(-48deg) scale(0.35);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) rotateX(64deg) rotateZ(-18deg) scale(0.76);
+    opacity: 1;
+  }
+}
+@keyframes menu-intro-object {
+  from {
+    transform: translate3d(0, 0, -120px) rotateZ(-35deg) scale(0.45);
+  }
+}
+@keyframes menu-intro-back {
+  from {
+    transform: translate3d(-120px, 80px, -80px) rotateZ(-42deg);
+    opacity: 0;
+  }
+}
+@keyframes menu-intro-front {
+  from {
+    transform: translate3d(160px, -100px, 180px) rotateZ(120deg) scale(0.2);
+    opacity: 0;
+  }
+}
+@keyframes menu-intro-orbit {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes menu-intro-orbit-reverse {
+  to {
+    transform: translateZ(28px) rotateX(12deg) rotateZ(-360deg);
+  }
+}
+@keyframes menu-intro-spark {
+  from {
+    opacity: 0;
+    scale: 0.1;
+  }
+  45% {
+    opacity: 1;
+  }
+}
+@keyframes menu-intro-copy {
+  from {
+    opacity: 0;
+    transform: translateY(28px) rotateX(-16deg);
+  }
+}
+@keyframes menu-intro-line {
+  to {
+    width: min(180px, 36vw);
+  }
+}
 .motion-surface[data-active="false"] * {
   animation-play-state: paused !important;
 }
@@ -145,6 +446,9 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .menu-opening {
+    display: none !important;
+  }
   .visual-fallback,
   .motion-surface *,
   .product-dialog {

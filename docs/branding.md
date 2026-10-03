@@ -1,6 +1,6 @@
 # Brand and creative strategy
 
-Status: original working Ravoq identity, naming exploration, SVG logo variants, favicons, illustration package and renderer captures are implemented. The guidance below retains the original creative criteria; branding/README.md and its checksum manifest describe delivered assets. Domain/trademark clearance, cultural review and physical print approval are not claimed.
+Status: original working Resmen identity, naming exploration, SVG logo variants, favicons, illustration package and renderer captures are implemented. The guidance below retains the original creative criteria; branding/README.md and its checksum manifest describe delivered assets. Domain/trademark clearance, cultural review and physical print approval are not claimed.
 
 ## Positioning
 
@@ -88,7 +88,7 @@ No final brand choice is a prerequisite for Phase 1. Before public launch, ident
 
 ## Implemented assets and provenance
 
-Ravoq is the current working identity (name clearance is not claimed). The arch/R monogram in `src/components/brand.tsx` and app icon, girih-inspired geometric pattern in `public/branding/patterns/girih.svg`, and eight plate illustrations in `public/branding/illustrations/` are original code-drawn SVG compositions created for this project. The dishes are stylized illustrations, not food photographs. `scripts/demo-assets.ts` creates WebP derivatives and tenant-owned metadata. No uploaded SVG is accepted. Product imagery can be replaced with a restaurant's validated photographs.
+Resmen is the current working identity (name clearance is not claimed). The arch/R monogram in `src/components/brand.tsx` and app icon, girih-inspired geometric pattern in `public/branding/patterns/girih.svg`, and eight plate illustrations in `public/branding/illustrations/` are original code-drawn SVG compositions created for this project. The dishes are stylized illustrations, not food photographs. `scripts/demo-assets.ts` creates WebP derivatives and tenant-owned metadata. No uploaded SVG is accepted. Product imagery can be replaced with a restaurant's validated photographs.
 
 Template previews are actual Chromium captures of the shipped renderers using the independent immutable showcase DTO. Capture manifest records viewport/version/date. Source SVGs remain available for manual refinement; cultural review remains recommended before positioning the designs as authentic traditional artwork.
 

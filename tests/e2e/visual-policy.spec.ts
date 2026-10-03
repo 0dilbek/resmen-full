@@ -7,6 +7,7 @@ test("reduced-motion renders the landing fallback and menus without a GPU", asyn
   await expect(page.locator(".visual-fallback .phone-mock")).toBeVisible();
   await expect(page.locator(".visual-canvas")).toHaveCount(0);
   await page.goto("/en/templates/food-cards-3d");
+  await expect(page.locator(".menu-opening")).not.toBeVisible();
   await expect(page.locator(".motion-surface")).toHaveAttribute(
     "data-active",
     "false",
@@ -16,6 +17,23 @@ test("reduced-motion renders the landing fallback and menus without a GPU", asyn
     .getByRole("button", { name: "Celebration plov", exact: true })
     .click();
   await expect(page.getByRole("dialog")).toBeVisible();
+});
+test("menus open with a skippable template-specific 3D intro", async ({
+  page,
+}) => {
+  await page.goto("/en/templates/food-cards-3d?intro=always");
+  const premiumIntro = page.locator(".menu-opening");
+  await expect(premiumIntro).toBeVisible();
+  await expect(premiumIntro).toHaveAttribute("data-intro-variant", "gallery");
+  await expect(premiumIntro.locator(".intro-3d-scene")).toBeVisible();
+  await page.getByRole("button", { name: "Skip intro" }).click();
+  await expect(premiumIntro).toHaveCount(0);
+
+  await page.goto("/en/templates/minimal-01?intro=always");
+  await expect(page.locator(".menu-opening")).toHaveAttribute(
+    "data-intro-variant",
+    "minimal",
+  );
 });
 test("WebGL failure keeps the static landing composition usable", async ({
   page,

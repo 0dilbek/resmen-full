@@ -31,6 +31,6 @@ export async function sendAuthMail(to: string, subject: string, url: string) {
     from: config.MAIL_FROM,
     to,
     subject,
-    text: `${subject}\n\n${url}\n\nRavoq`,
+    text: `${subject}\n\n${url}\n\nResmen`,
   });
 }

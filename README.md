@@ -1,6 +1,6 @@
-# Ravoq — Restaurant QR Menu
+# Resmen — Restaurant QR Menu
 
-A multilingual restaurant platform built as a feature-first Next.js modular monolith. Ravoq is the working identity; the original logo/illustration package is in [branding](branding/README.md).
+A multilingual restaurant platform built as a feature-first Next.js modular monolith. Resmen is the product identity; the original logo/illustration package is in [branding](branding/README.md).
 
 ## Implemented
 

@@ -27,7 +27,7 @@ export default async function Page({
       </header>
       <div className="picker-heading">
         {!restaurants.length && <EmptyIllustration kind="restaurant" />}
-        <span className="eyebrow">RAVOQ WORKSPACE</span>
+        <span className="eyebrow">RESMEN WORKSPACE</span>
         <h1>{t(restaurants.length ? "workspace" : "emptyRestaurants")}</h1>
         <p className="muted">{t("emptyRestaurantsNote")}</p>
       </div>

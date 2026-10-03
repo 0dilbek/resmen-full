@@ -1,5 +1,5 @@
 [Unit]
-Description=Ravoq bounded expired-data maintenance
+Description=Resmen bounded expired-data maintenance
 After=postgresql.service
 
 [Service]

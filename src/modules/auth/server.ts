@@ -14,7 +14,7 @@ let instance: ReturnType<typeof buildAuth> | undefined;
 function buildAuth() {
   const config = env();
   return betterAuth({
-    appName: "Ravoq",
+    appName: "Resmen",
     baseURL: config.BETTER_AUTH_URL,
     secret: config.BETTER_AUTH_SECRET,
     database: drizzleAdapter(db, { provider: "pg", schema }),
@@ -25,13 +25,13 @@ function buildAuth() {
       requireEmailVerification: true,
       revokeSessionsOnPasswordReset: true,
       sendResetPassword: async ({ user, url }) =>
-        sendAuthMail(user.email, "Ravoq · Reset password", url),
+        sendAuthMail(user.email, "Resmen · Reset password", url),
     },
     emailVerification: {
       sendOnSignUp: true,
       autoSignInAfterVerification: true,
       sendVerificationEmail: async ({ user, url }) =>
-        sendAuthMail(user.email, "Ravoq · Verify your email", url),
+        sendAuthMail(user.email, "Resmen · Verify your email", url),
     },
     databaseHooks: {
       user: {
@@ -42,7 +42,7 @@ function buildAuth() {
     },
     session: { expiresIn: 60 * 60 * 24 * 7, freshAge: 60 * 15 },
     rateLimit: { enabled: true, storage: "database", window: 60, max: 60 },
-    plugins: [twoFactor({ issuer: "Ravoq" }), nextCookies()],
+    plugins: [twoFactor({ issuer: "Resmen" }), nextCookies()],
   });
 }
 export function auth() {

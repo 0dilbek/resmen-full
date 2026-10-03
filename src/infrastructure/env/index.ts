@@ -17,7 +17,7 @@ export const environmentSchema = z
     SMTP_PORT: z.coerce.number().int().min(1).max(65535).default(587),
     SMTP_USER: z.string().optional(),
     SMTP_PASSWORD: z.string().optional(),
-    MAIL_FROM: z.string().default("Ravoq <noreply@localhost>"),
+    MAIL_FROM: z.string().default("Resmen <noreply@localhost>"),
     STORAGE_DRIVER: z.enum(["local", "s3"]).default("local"),
     S3_ENDPOINT: z.string().optional(),
     S3_REGION: z.string().default("auto"),

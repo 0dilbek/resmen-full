@@ -1,5 +1,5 @@
 [Unit]
-Description=Daily Ravoq maintenance
+Description=Daily Resmen maintenance
 
 [Timer]
 OnCalendar=*-*-* 04:15:00

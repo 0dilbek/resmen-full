@@ -7,7 +7,7 @@ export default async function Page() {
   return (
     <MarketingShell>
       <div className="marketing-page-heading">
-        <p className="eyebrow">Ravoq</p>
+        <p className="eyebrow">Resmen</p>
         <h1>{t("contactTitle")}</h1>
         <p>{t("contactNote")}</p>
       </div>

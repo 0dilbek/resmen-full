@@ -42,7 +42,7 @@ export default async function Page({
       <main className="platform-content">
         <div className="page-title">
           <div>
-            <p className="eyebrow">Ravoq</p>
+            <p className="eyebrow">Resmen</p>
             <h1>{t("platformAdmin")}</h1>
             <p>{t("adminFreshHint")}</p>
           </div>

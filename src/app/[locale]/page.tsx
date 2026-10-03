@@ -112,7 +112,7 @@ export default async function Home() {
       </main>
       <footer className="marketing-footer">
         <Brand href={`/${locale}`} />
-        <span>© {new Date().getFullYear()} Ravoq</span>
+        <span>© {new Date().getFullYear()} Resmen</span>
         <Link href={`/${locale}/contact`}>{t("contact")}</Link>
       </footer>
     </>

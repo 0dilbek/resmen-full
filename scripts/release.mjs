@@ -15,7 +15,7 @@ async function assertClean(directory) {
 await assertClean('.next/standalone');
 const version=new Date().toISOString().replace(/[:.]/g,'-');
 await mkdir('.local/releases',{recursive:true,mode:0o700});
-const path=`.local/releases/ravoq-${version}.tar.gz`;
+const path=`.local/releases/resmen-${version}.tar.gz`;
 // Explicit allowlist: credentials, test data, uploads, and repository metadata never enter releases.
 await exec('tar',['-czf',path,'.next/standalone','src','messages','scripts','drizzle','deploy','docs','branding','README.md','package.json','pnpm-lock.yaml','tsconfig.json','drizzle.config.ts','.nvmrc']);
 const digest=createHash('sha256').update(await readFile(path)).digest('hex');await writeFile(`${path}.sha256`,`${digest}  ${path.split('/').pop()}\n`,{mode:0o600});console.info(`Release artifact: ${path}`);console.info(`SHA-256: ${digest}`);

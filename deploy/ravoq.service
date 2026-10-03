@@ -1,5 +1,5 @@
 [Unit]
-Description=Ravoq restaurant QR platform
+Description=Resmen restaurant QR platform
 After=network-online.target postgresql.service
 Wants=network-online.target
 

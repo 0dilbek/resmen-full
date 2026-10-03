@@ -4,8 +4,8 @@ import "./globals.css";
 import "@/modules/templates/compositions.css";
 export const metadata: Metadata = {
   title: {
-    default: "Ravoq — Your hospitality, beautifully connected",
-    template: "%s · Ravoq",
+    default: "Resmen — Your hospitality, beautifully connected",
+    template: "%s · Resmen",
   },
   description:
     "A multilingual digital menu and restaurant workspace. Made for hospitality.",

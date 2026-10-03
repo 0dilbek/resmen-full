@@ -4,7 +4,7 @@ Target: `https://resmen.loyiham.uz` through the existing `tezbozor` SSH profile.
 
 ## Verified infrastructure and local evidence
 
-Initial read-only inspection on 2026-09-16 found Node 22.22.1, active Nginx and loopback PostgreSQL on the shared Ubuntu server. No Ravoq service/site/release existed; the HTTPS certificate did not cover this domain. Other sites must be preserved. Recheck these observations, port 3107, installed Nginx/systemd/Certbot versions and available disk before applying configuration.
+Initial read-only inspection on 2026-09-16 found Node 22.22.1, active Nginx and loopback PostgreSQL on the shared Ubuntu server. No Resmen service/site/release existed; the HTTPS certificate did not cover this domain. Other sites must be preserved. Recheck these observations, port 3107, installed Nginx/systemd/Certbot versions and available disk before applying configuration.
 
 Locally, all nine migrations applied to a separate empty PostgreSQL 18.6 database. A custom-format dump restored successfully into another empty database, yielding 44 public tables and nine migration journal entries. This verifies the mechanism against local schema; it is not a production backup, recovery drill with production data, or proof of offsite backup delivery.
 

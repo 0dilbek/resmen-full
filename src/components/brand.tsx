@@ -10,7 +10,7 @@ export function Brand({
     <Link
       className={`brand ${inverse ? "brand-inverse" : ""}`}
       href={href}
-      aria-label="Ravoq"
+      aria-label="Resmen"
     >
       <svg
         width="32"
@@ -26,7 +26,7 @@ export function Brand({
         <path d="m17 23 11 9h-9l-8-7 6-2Z" fill="currentColor" />
       </svg>
       <span>
-        ravoq<span className="brand-dot">.</span>
+        resmen<span className="brand-dot">.</span>
       </span>
     </Link>
   );
